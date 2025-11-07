@@ -1,8 +1,9 @@
 name: Playwright Tests
 on:
   schedule:
-    # Runs every day at 11:40 AM UTC (which is 5:10 PM IST)
-    - cron: '5gi0 11 * * *'
+    # Runs every day at 12:40 PM UTC = 6:10 PM IST
+    - cron: '40 12 * * *'
+  workflow_dispatch:  # allows manual run from GitHub UI
   push:
     branches: [ main, master ]
   pull_request:
